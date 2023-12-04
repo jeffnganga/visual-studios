@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <form>
+        Value 1:<input type="text"><br>
+        Value 2:<input type="text"><br>
+        operator
+        <select id="operator">
+            <option value="add">Add</option>
+            <option value="min">Minus</option>
+            <option value="div">Divide</option>
+            <option value="mul">Multiply</option>
+        </select>
+        <button type="button" onclick="calc()">Calculate</button>
+    </form>
+    <div id="results"></div>
+    <script>
+        function Calc(){
+            var a = perenInt(document.querySelector("#value1").value);
+            var b = perenInt(document.querySelector("#value2").value);
+            var op = perenInt(document.querySelector("#operator").value);
+            var Calculate;
+
+            if (op=="add") {
+               var Calculate =a + b;
+            }  else if (op=="min"){
+                 Calculate = a-b
+            }
+             else if (op=="/"){
+                Calculate=a/b
+            }
+            else if(op=="*"){
+                Calculate =a*b
+            }
+           document.querySelector("#result").innerHTML = Calculate;
+        }
+    </script>
+</body>
+</html>

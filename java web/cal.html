@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Store your birth year in a variable
+var birthYear = 1988; // Replace with your birth year
+
+// Store a future year in a variable
+var futureYear = 2026; // Replace with the desired future year
+
+// Get the current date to check if your birthday has occurred in the future year
+var currentDate = new Date();
+var currentYear = currentDate.getFullYear();
+
+// Calculate your possible ages
+var ageBeforeBirthday = futureYear - birthYear;
+var ageAfterBirthday = ageBeforeBirthday - 1;
+
+// Output the ages to the screen
+console.log(
+  "I will be either " +
+    ageBeforeBirthday +
+    " or " +
+    ageAfterBirthday +
+    " in " +
+    futureYear
+);
+
+    </script>
+</body>
+</html>

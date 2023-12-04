@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunction(typ) {
+           //console.log(typ);
+        
+         let a = document.getElementById("mo").value;
+         let b=  document.getElementById("mod").value;
+            if (typ == 1){
+         let c = parseInt(a) + parseInt(b);
+         document.getElementById("demo").value = c;
+                    }
+            if (typ == 2){   
+                let c= parseInt(a)- parseInt(b)
+                document.getElementById("demo").value = c;        
+            }
+            if (typ==3){
+                let c=parseInt(a)*parseInt(b);
+                document.getElementById("demo").value=c;
+            }
+            if (typ==4){
+                let c=parseInt(a)/parseInt(b)
+                document.getElementById("demo").value=c;
+            }
+          }
+    </script>
+</head>
+<body>
+    <p>Box</p>
+<div class="">
+    <div>
+        <input type="text" id="mo">
+        <input type="text" id="mod">>
+        
+        <input type="text" id="demo">
+    </div>
+    <br>
+<div>
+    <button type="button" onclick="myFunction(1)">+</button>
+    <button type="button" onclick="myFunction(2)">-</button>
+    <button type="button" onclick="myFunction(3)">*</button>
+    <button type="button" onclick="myFunction(4)">/</button>
+    
+
+</div>
+</div>
+</body>
+</html>

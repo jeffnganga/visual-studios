@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Bet App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to Simple Bet App!</h1>
+    <h2>Available Bets:</h2>
+    <ul>
+        {% for bet in bets %}
+        <li>
+            <form method="post" action="{{ url_for('place_bet', bet_id=bet.id) }}">
+                <p>{{ bet.title }} - Odds: {{ bet.odds }}</p>
+                <label for="amount">Enter Amount:</label>
+                <input type="number" step="0.01" name="amount" required>
+                <input type="submit" value="Place Bet">
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+Create style.css in the static folder (optional - for basic styling):
+css
+Copy code
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+li {
+    margin-bottom: 10px;
+}
+Run the App: Save all the files and run the Flask app using the following command:
+bash
+Copy code
+python app.py
+Visit http://localhost:5000/ in your web browser to access the simple bet app. You should see a list of available bets, and you can enter the amount you want to bet on each option and place the bets.
+
+Keep in mind that this is a basic example without any real backend or database support. For a real-world betting app, you'll need to implement user authentication, handle real data, and integrate a database to store and manage bets and user information securely.
+
+Always remember that real-money betting apps involve legal and regulatory considerations, and you should comply with all relevant laws and regulations before deploying such an app.
+
+
+
+
+User
+can html create a app
+ChatGPT
+HTML alone cannot create a standalone app in the traditional sense. HTML is a markup language used to structure the content of a website, but it lacks the capabilities to perform complex tasks or run as a standalone application on its own.
+
+However, HTML can be used in conjunction with other technologies to create web applications or hybrid mobile applications.
+
+Web Applications: HTML is a core component of web development, and it forms the structure of web pages. To create web applications, you typically combine HTML with CSS for styling and JavaScript for interactivity. Modern web frameworks like React, Angular, or Vue.js also use HTML-like syntax to build web components, making it easier to create complex web applications.
+
+Hybrid Mobile Applications: With the help of frameworks like Apache Cordova or Ionic, you can use web technologies (HTML, CSS, and JavaScript) to create hybrid mobile applications. These applications run inside a native shell that hosts a web view, allowing them to access native device features while still using web technologies for the user interface.
+
+In summary, while HTML is not capable of creating standalone applications on its own, it serves as a crucial building block in web development and can be combined with other technologies to build web applications and hybrid mobile applications. For fully native applications, you would need to use programming languages specific to the target platform (e.g., Swift or Objective-C for iOS, Java or Kotlin for Android).
+
+
+
+
+
+
+
+
+
+
+
+

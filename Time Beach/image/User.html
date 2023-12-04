@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo{
+            background-color:gray;
+            padding:3px;
+            padding-right: 10px;
+            margin-left: 320px;
+            margin-top: 15px;
+        }
+        .m1{
+            padding:3px;
+            padding-right: 10px;
+            margin-left: 320px;
+            margin-top: 15px;
+        }
+        #radio{
+            text-align:right;
+        }
+    </style>
+</head>
+<body>
+    <form>
+    <h1>User Registration</h1>
+    <p>Please complete the following form to register with our site</p>
+    <label>User Name:</label>
+    <input type="text" name="UsernName" class="m1">
+    <br>
+    
+    <label>Password:</label>
+    <input type="Password" name="Password" class="m1">
+    <br>
+    <label>Gender:</label>
+        <div id="radio">
+    <input type="radio" name="Gender" class="m1">Male <br>
+    <input type="radio" name="Gender">Female
+</div>
+    <br>
+    <label>How did you hear about us</label>
+    <select class="m1">
+        <option>Select answer</option>
+    </select><br>
+    <p>Please select this box if you wish </p>
+    <p>to be added to our mailing list <input type="checkbox" class="m1"></p>
+    <p>we will not pass on your details to any third party</p>
+    
+    <br>
+    <input type="button" value="Register now" class="demo">
+</form>
+</body>
+</html>

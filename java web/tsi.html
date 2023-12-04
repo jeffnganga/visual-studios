@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let count = 12;
+        function incrementCount() {
+            count++;
+            document.getElementById("count").innerText = count;
+            updateFontSize(count);
+        }
+        function updateFontSize(a) {
+            const fontSize = a;
+            ///console.log(fontSize);
+            document.getElementById("count").style.fontSize = fontSize+'px';
+        }
+    </script>
+</head>
+<body>
+    <p>TSI</p>
+     <button onclick="incrementCount()">Increment Count</button>
+    <p id="count">0</p>
+   
+</body>
+</html>
